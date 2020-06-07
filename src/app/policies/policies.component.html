@@ -1,0 +1,24 @@
+﻿<div class="card mt-4">
+  <h4 class="card-header">Policies list: {{userName}}</h4>
+  <div class="card-body">
+    <table class="table table-striped table-hover" *ngIf="policies">
+      <thead>
+        <tr>
+          <th scope="col">Amount insured</th>
+          <th scope="col">Inception date</th>
+          <th scope="col" class="text-center">Installment payment</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let policy of policies">
+          <td>{{policy.amountInsured}}</td>
+          <td>{{policy.inceptionDate | date:'MM/dd/yyyy HH:mm:ss'}}</td>
+          <td class="text-center">
+            <i *ngIf="policy.installmentPayment" class="fa fa-check-square-o" aria-hidden="true"></i>
+            <i *ngIf="!policy.installmentPayment" class="fa fa-square-o" aria-hidden="true"></i>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

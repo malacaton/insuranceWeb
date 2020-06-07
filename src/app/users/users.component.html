@@ -1,0 +1,29 @@
+﻿<div class="card mt-4">
+  <h4 class="card-header">Users list</h4>
+  <div class="card-body">
+    <table class="table table-striped table-hover" *ngIf="users">
+      <thead>
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Email</th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of getPage">
+          <td>{{user.name}}</td>
+          <td>{{user.email}}</td>
+          <td>
+            <a *ngIf="isAdmin" class="btn btn-info pull-right" [routerLink]="['/policies',user.name]">Policies</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="d-flex justify-content-between p-2">
+      <ngb-pagination [collectionSize]="collectionSize" [(page)]="page" [pageSize]="pageSize">
+      </ngb-pagination>
+    </div>
+
+  </div>
+</div>

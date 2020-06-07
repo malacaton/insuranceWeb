@@ -1,0 +1,14 @@
+﻿<!-- nav -->
+<nav class="navbar navbar-expand navbar-dark bg-dark" *ngIf="user">
+  <div class="navbar-nav">
+    <a class="nav-item nav-link" routerLink="/"><i class="fa fa-home fa-2x" aria-hidden="true"></i></a>
+    <a class="nav-item nav-link" routerLink="/users"><i class="fa fa-users fa-2x"></i></a>
+    <a class="nav-item nav-link exit-button" (click)="logout()"><i class="fa fa-sign-out fa-2x"
+        aria-hidden="true"></i></a>
+  </div>
+</nav>
+
+<!-- main app container -->
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
