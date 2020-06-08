@@ -1,10 +1,10 @@
 # ALTRAN level test - Frontend
 
-Run example with "ng g -o" on project folder, wich opens it on port 4200
+Run example with _"ng g -o"_ on project folder, wich opens it on port _4200_
 
 # To test
-User: _barnettblankenship@quotezart.com_
+_User:: barnettblankenship@quotezart.com
 
-Administrator: _britneyblankenship@quotezart.com_
+_Administrator:_ britneyblankenship@quotezart.com
 
 
