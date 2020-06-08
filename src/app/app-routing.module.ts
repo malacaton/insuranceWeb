@@ -18,7 +18,6 @@ const routes: Routes = [
     path: 'users',
     component: UsersComponent,
     canActivate: [AuthGuard],
-    // data: { roles: [Role.Admin] }
   },
   {
     path: 'policies/:userName',
